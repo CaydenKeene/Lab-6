@@ -1,3 +1,4 @@
+# encoder function, author: Cayden Keene
 def encoder(password):
     encoded_password = ""
     for i in password:
@@ -8,7 +9,7 @@ def encoder(password):
         encoded_password += str(i)
     return encoded_password
 
-
+# main function, author: Cayden Keene
 if __name__ == '__main__':
     while True:
         print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
