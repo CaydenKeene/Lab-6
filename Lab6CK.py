@@ -9,9 +9,9 @@ def encoder(password):
         encoded_password += str(i)
     return encoded_password
 
-def decoder(ep):
+def decoder(encoded_password):
     p = ""
-    for i in ep:
+    for i in encoded_password:
         if int(i)-3 <= 0:
             print("ERROR")
             break
