@@ -9,6 +9,16 @@ def encoder(password):
         encoded_password += str(i)
     return encoded_password
 
+def decoder(ep):
+    p = ""
+    for i in ep:
+        if int(i)-3 <= 0:
+            print("ERROR")
+            break
+        else:
+            p = p + str(int(i)-3)
+    return p
+
 # main function, author: Cayden Keene
 if __name__ == '__main__':
     while True:
@@ -20,7 +30,7 @@ if __name__ == '__main__':
             print("Your password has been encoded and stored!\n")
 
         elif user_input == 2:
-            decoder(encoded_password, password)
-
+            password = decoder(encoded_password)
+            print(f"The encoded password is {encoded_password}, and the original password is {password}.\n")
         elif user_input == 3:
             break
